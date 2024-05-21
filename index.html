@@ -96,8 +96,11 @@
     const withdrawBtn= document.getElementById("withdrawbtn");
     withdrawBtn.addEventListener("click",function(){
         const withdrawAmount= document.getElementById("withdrawamount").value;
-        const withdrawAmount2= parseFloat.withdrawAmount;
-        
+        const withdrawAmountt= parseFloat(withdrawAmount);
+   
+        updateSpan("mywithdraw",withdrawAmountt);
+        updateSpan("mybalance",-1*withdrawAmountt);
+        document.getElementById("withdrawamount").value="";
 
     })
 
